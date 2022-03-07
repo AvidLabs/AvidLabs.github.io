@@ -8,6 +8,21 @@ This guide shows steps to install Kubernetes on Rocky Linux using kubeadm. I cho
 
 I have chosen to use containerd over Docker and CRI-O due to it's simplicity and lightweight nature. I will not be needing to use any docker specific commands as all containers should be running in the Kubernetes system.
 
+## Table of Contents
+- [System Requirements](#system-requirements)
+- [Rocky Linux Preparation](#rocky-linux-preparation)
+    - [Installing Rocky Linux](#installing-rocky-linux)
+- [Install Prerequisites](#install-prerequisites)
+    - [SSH](#ssh)
+    - [Installing Container Runtime](#installing-container-runtime)
+    - [Installing Kubernetes Prerequisites](#installing-kubernetes-prerequisites)
+- [Install Kubernetes](#install-kubernetes)
+    - [Installing Kubernetes Master Node](#installing-kubernetes-master-node)
+    - [Installing Kubernetes Worker Nodes](#installing-kubernetes-worker-nodes)
+- [Install Additional Kubernetes Tools](#install-additional-kubernetes-tools)
+    - [Install k9s, a cli based kubernetes dashboard](#install-k9s-a-cli-based-kubernetes-dashboard)
+    - [Install kubectl-aliases, a programmatically generated list of kubectl aliases](#install-kubectl-aliases-a-programmatically-generated-list-of-kubectl-aliases)
+
 ## System Requirements
 
 - At least 2 cores per node
@@ -250,7 +265,7 @@ From here, your kubernetes cluster should be fully functioning.
 
 ## Install Additional Kubernetes Tools
 
-##### Install k9s, a cli based kubernetes dashboard
+#### Install k9s, a cli based kubernetes dashboard
 
 https://github.com/derailed/k9s 
 
@@ -260,7 +275,7 @@ tar -xzf k9s_Linux_x86_64.tar.gz
 chmod +x k9s 4sudo mv k9s /usr/local/bin/k9s
 ```
 
-##### Install kubectl-aliases, a programmatically generated list of kubectl aliases
+#### Install kubectl-aliases, a programmatically generated list of kubectl aliases
 
 https://github.com/ahmetb/kubectl-aliases 
 
